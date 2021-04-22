@@ -8,10 +8,12 @@ import ModelX from '../assets/Desktop-ModelX.jpeg'
 import ModelY from '../assets/Desktop-ModelY.jpeg'
 import SolarPanels from '../assets/Desktop-SolarPanels.jpeg'
 import SolarRoof from '../assets/Desktop-SolarRoof.jpeg'
+import Header from '../components/Header';
 
 function LandingPage() {
     return (
     <div >
+    <Header />
      <div className="app__itemsContainer" >
        <Item 
          title="Model S"

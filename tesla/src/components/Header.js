@@ -12,6 +12,7 @@ function Header() {
         <div className='header'> 
             <div className='header__logo'>
                 <img 
+                 onClick={() => history.push('/')}
                  src={TeslaLogo} 
                  alt='tesla logo' />
             </div>
