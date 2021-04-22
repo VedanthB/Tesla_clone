@@ -1,6 +1,6 @@
 # Tesla-clone React-redux React-router
 
-- Link to LIVE APP :
+- Link to LIVE APP : https://tesla-clone-266bf.web.app/
 - Link to Youtube video :
 
 # Tech used / Dependencies 
