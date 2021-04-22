@@ -2,3 +2,8 @@
     margin:0;
   }
   
+  .app__itemsContainer {
+    overflow: auto;
+    height: 100vh;
+    scroll-snap-type: y mandatory;
+  }

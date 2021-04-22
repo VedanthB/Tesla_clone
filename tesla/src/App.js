@@ -1,16 +1,18 @@
 import './App.css';
-import Header from './components/Header';
 import {  BrowserRouter as Router,  Switch,  Route } from "react-router-dom";
 import LandingPage from './screen/LandingPage';
 import TeslaAccount from './screen/TeslaAccount';
 import { useEffect } from 'react';
-import { login, logout } from './features/userSlice';
-import { useDispatch } from 'react-redux';
+import { login, logout, selectUser } from './features/userSlice';
+import { useDispatch, useSelector } from 'react-redux';
 import { auth } from './firebase'
+import Signup from './screen/Signup';
+import Login from './screen/Login';
 
 
 
 function App() {
+  const user = useSelector(selectUser)
   const dispatch = useDispatch()
 
   useEffect(() => {
@@ -37,16 +39,25 @@ function App() {
     <div className="App">
      <Router>
 
-        <Header />
+       
          
          <Switch>
            <Route path='/account'>
-              <TeslaAccount />
+             {!user? <Signup /> : <TeslaAccount />}
            </Route>
+
+            <Route path='/signup'>
+              <Signup />
+            </Route>
+            
+            <Route path='/login'>
+              <Login />
+            </Route>
 
            <Route>
                <LandingPage path='/' />
             </Route>
+
          </Switch>  
 
      </Router>     

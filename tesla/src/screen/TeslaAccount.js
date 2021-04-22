@@ -5,6 +5,7 @@ import Car from '../components/Car'
 import { logout, selectUser } from '../features/userSlice'
 import { auth } from '../firebase'
 import './TesalAccount.css'
+import Header from '../components/Header'
 
 function TeslaAccount() {
     const user = useSelector(selectUser)
@@ -24,6 +25,7 @@ function TeslaAccount() {
     
     return (
         <div>
+           <Header />
              <div className='teslaAccount__info'>
                  <div className='teslaAccount__person'>
                     <h4>{user?.displayName + "'s"} Tesla</h4>
